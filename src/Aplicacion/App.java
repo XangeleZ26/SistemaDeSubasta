@@ -1,7 +1,9 @@
 package Aplicacion;
 
+import Arreglos.ArregloUsuarios;
 import Modelo.*;
 import Controlador.*;
+import Vista.PantallaLogin;
 
 public class App {
     public static void main(String [] Args) {
@@ -53,7 +55,7 @@ public class App {
         System.out.println(sistema.getGenerador().getCodigo());
         
         
-        PantallaInicial pantallaInicial = new PantallaInicial();
+        PantallaLogin pantallaInicial = new PantallaLogin();
         ControladorPantallaInicial controlador = new ControladorPantallaInicial(pantallaInicial, usuarios);
         controlador.iniciar();
         

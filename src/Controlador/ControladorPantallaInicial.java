@@ -4,15 +4,18 @@ import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.JOptionPane;
 import Aplicacion.*;
+import Arreglos.ArregloUsuarios;
 import Modelo.*;
+import Vista.InicioFallido;
+import Vista.PantallaLogin;
 
 public class ControladorPantallaInicial {
-    private PantallaInicial pantallaInicial;
+    private PantallaLogin pantallaInicial;
     private ArregloUsuarios usuarios;
     private InicioFallido inicioFallido;
     private ControladorInicioFallido controladorIF;
     
-    public ControladorPantallaInicial(PantallaInicial pantallaInicial, ArregloUsuarios usuarios) {
+    public ControladorPantallaInicial(PantallaLogin pantallaInicial, ArregloUsuarios usuarios) {
         this.pantallaInicial = pantallaInicial;
         this.usuarios = new ArregloUsuarios(usuarios);
         

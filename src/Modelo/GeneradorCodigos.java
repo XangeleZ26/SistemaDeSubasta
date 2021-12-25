@@ -1,5 +1,7 @@
 package Modelo;
 
+import Arreglos.ArregloUsuarios;
+
 public class GeneradorCodigos {
     private String codigo;
     private ArregloUsuarios usuarios;

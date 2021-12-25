@@ -2,11 +2,14 @@ package Controlador;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import Aplicacion.*;
+import Arreglos.ArregloUsuarios;
 import Modelo.*;
+import Vista.InicioFallido;
+import Vista.PantallaLogin;
 
 
 public class ControladorInicioFallido {
-    private PantallaInicial pantallaInicial;
+    private PantallaLogin pantallaInicial;
     private InicioFallido inicioFallido;
     private ControladorPantallaInicial controladorPI;
     private ArregloUsuarios usuarios;
@@ -19,7 +22,7 @@ public class ControladorInicioFallido {
             @Override
             public void actionPerformed(ActionEvent e) {
                 inicioFallido.dispose();
-                pantallaInicial = new PantallaInicial();
+                pantallaInicial = new PantallaLogin();
                 controladorPI = new ControladorPantallaInicial(pantallaInicial, usuarios);
                 controladorPI.iniciar();
             }

@@ -1,5 +1,7 @@
 package Modelo;
 
+import Arreglos.ArregloUsuarios;
+
 public class SistemaSubastas {
     private ArregloUsuarios usuariosRegistrados;
     private GeneradorCodigos generador;
