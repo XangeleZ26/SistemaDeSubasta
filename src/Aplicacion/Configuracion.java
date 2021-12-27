@@ -1,8 +1,9 @@
 package Aplicacion;
 
 import Arreglos.ArregloUsuarios;
+import Modelo.SistemaSubastas;
 
 public class Configuracion {
-    ArregloUsuarios arrUsuarios=new ArregloUsuarios();
-    
+    public static ArregloUsuarios arrUsuarios=new ArregloUsuarios();
+
 }

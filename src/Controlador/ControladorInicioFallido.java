@@ -23,7 +23,7 @@ public class ControladorInicioFallido {
             public void actionPerformed(ActionEvent e) {
                 inicioFallido.dispose();
                 pantallaInicial = new PantallaLogin();
-                controladorPI = new ControladorPantallaInicial(pantallaInicial, usuarios);
+                controladorPI = new ControladorPantallaInicial(pantallaInicial);
                 controladorPI.iniciar();
             }
         });

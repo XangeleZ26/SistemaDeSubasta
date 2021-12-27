@@ -7,7 +7,7 @@ public class SistemaSubastas {
     private GeneradorCodigos generador;
     
     //Constructor
-    public SistemaSubastas(ArregloUsuarios usuariosRegistrados, GeneradorCodigos generador) {
+    public SistemaSubastas(GeneradorCodigos generador) {
         this.usuariosRegistrados = usuariosRegistrados;
         this.generador = generador;
     }

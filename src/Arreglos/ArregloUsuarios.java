@@ -18,7 +18,7 @@ public class ArregloUsuarios {
         this.indiceUsu = 0;
     }
     
-    public ArregloUsuarios(ArregloUsuarios usuarios) {
+    public ArregloUsuarios(ArregloUsuarios usuarios) { //extra
         this.usuarios = usuarios.getUsuarios();
         this.indiceUsu = usuarios.getIndiceUsu();
     }
@@ -64,6 +64,15 @@ public class ArregloUsuarios {
         this.usuarios = usuariosPlus;
         result = true;
         return result;
+    }
+
+    @Override
+    public String toString() {
+        String contenido = "";
+         for(int i=0;i<this.indiceUsu;i++){
+             contenido+=this.usuarios[i]+"\n";
+         }
+         return contenido;
     }
     
 }

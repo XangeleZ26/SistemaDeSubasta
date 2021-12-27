@@ -6,46 +6,52 @@
 package Modelo;
 
 public class Persona {
-     private String nombre;
-    private String aPaterno;
-    private String aMaterno;
-    private int DNI;
-    private Ubicacion ubicacion;
-    private Contacto contacto;
 
-    public Persona(String nombre, String aPaterno, String aMaterno, int DNI, Ubicacion ubicacion, Contacto contacto) {
+    private String nombre;
+    private String apellido;
+    private String DNI;
+    private String celular;
+
+    public Persona(String nombre, String apellido, String DNI, String celular) {
         this.nombre = nombre;
-        this.aPaterno = aPaterno;
-        this.aMaterno = aMaterno;
+        this.apellido = apellido;
         this.DNI = DNI;
-        this.ubicacion = ubicacion;
-        this.contacto = contacto;
+        this.celular = celular;
     }
-    
-    
+
     //Getters
+
     public String getNombre() {
         return nombre;
     }
-    
-    public String getaPaterno() {
-        return aPaterno;
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
-    
-    public String getaMaterno() {
-        return aMaterno;
+
+    public String getApellido() {
+        return apellido;
     }
-    
-    public int getDNI() {
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public String getDNI() {
         return DNI;
     }
-    
-    public Ubicacion getUbicacion() {
-        return ubicacion;
+
+    public void setDNI(String DNI) {
+        this.DNI = DNI;
     }
-    
-    public Contacto getContacto() {
-        return contacto;
+
+    public String getCelular() {
+        return celular;
     }
-    
+
+    public void setCelular(String celular) {
+        this.celular = celular;
+    }
+   
+
 }

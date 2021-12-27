@@ -8,23 +8,19 @@ import Arreglos.ArregloUsuarios;
 import Modelo.*;
 import Vista.InicioFallido;
 import Vista.PantallaLogin;
+import Vista.RegistroUsuario;
 
 public class ControladorPantallaInicial {
     private PantallaLogin pantallaInicial;
     private ArregloUsuarios usuarios;
+    private SistemaSubastas subasta;
+    
     private InicioFallido inicioFallido;
     private ControladorInicioFallido controladorIF;
     
-    public ControladorPantallaInicial(PantallaLogin pantallaInicial, ArregloUsuarios usuarios) {
+    public ControladorPantallaInicial(PantallaLogin pantallaInicial) {
         this.pantallaInicial = pantallaInicial;
-        this.usuarios = new ArregloUsuarios(usuarios);
-        
-        this.pantallaInicial.btnSalir.addActionListener(new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.exit(0);
-            }
-        });
+        this.usuarios = Configuracion.arrUsuarios;
         
         this.pantallaInicial.btnIngresar.addActionListener(new ActionListener(){
             @Override
@@ -41,9 +37,23 @@ public class ControladorPantallaInicial {
                 }
             }
         });
+       this.pantallaInicial.btnRegistrarse.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+               ControladorRegistroUsuario controller=new ControladorRegistroUsuario(new RegistroUsuario());
+               controller.iniciar();
+               pantallaInicial.dispose();
+            }
+        });
         
         
         
+       this.pantallaInicial.btnSalir.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        });
     }
     
     public void iniciar() {

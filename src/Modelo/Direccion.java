@@ -11,103 +11,67 @@ package Modelo;
  */
 public class Direccion {
     // atributos dirección
-    private String calle;
-    private String numero;
-    private String distrito;
-    private String provincia;
-    private String departamento;
     private String pais;
-    private String codigoPostal;
-    private String referencia;
+    private String departamento;
+    private String provincia;
+    private String distrito;
+    private String direccion;
 
     // constructor
-    public Direccion(String calle, String numero, String distrito, String provincia, String departamento, String pais,
-            String codigoPostal, String referencia) {
-        this.calle = calle;
-        this.numero = numero;
-        this.distrito = distrito;
-        this.provincia = provincia;
-        this.departamento = departamento;
-        this.pais = pais;
-        this.codigoPostal = codigoPostal;
-        this.referencia = referencia;
-    }
-
-    // getters
-    public String getCalle() {
-        return calle;
-    }
-
-    public String getNumero() {
-        return numero;
-    }
-
-    public String getDistrito() {
-        return distrito;
-    }
-
-    public String getProvincia() {
-        return provincia;
-    }
-
-    public String getDepartamento() {
-        return departamento;
+    public Direccion(String pais,String Departamento,String Provincia,String Distrito,String direccion) {
+       this.pais=pais;
+       this.departamento=Departamento;
+       this.provincia=Provincia;
+       this.distrito=Distrito;
+       this.direccion=direccion;
     }
 
     public String getPais() {
         return pais;
     }
 
-    public String getCodigoPostal() {
-        return codigoPostal;
+    public void setPais(String pais) {
+        this.pais = pais;
     }
 
-    public String getReferencia() {
-        return referencia;
-    }
-
-    // setters
-
-    public void setCalle(String calle) {
-        this.calle = calle;
-    }
-
-    public void setNumero(String numero) {
-        this.numero = numero;
-    }
-
-    public void setDistrito(String distrito) {
-        this.distrito = distrito;
-    }
-
-    public void setProvincia(String provincia) {
-        this.provincia = provincia;
+    public String getDepartamento() {
+        return departamento;
     }
 
     public void setDepartamento(String departamento) {
         this.departamento = departamento;
     }
 
-    public void setPais(String pais) {
-        this.pais = pais;
+    public String getProvincia() {
+        return provincia;
     }
 
-    public void setCodigoPostal(String codigoPostal) {
-        this.codigoPostal = codigoPostal;
+    public void setProvincia(String provincia) {
+        this.provincia = provincia;
     }
 
-    public void setReferencia(String referencia) {
-        this.referencia = referencia;
+    public String getDistrito() {
+        return distrito;
+    }
+
+    public void setDistrito(String distrito) {
+        this.distrito = distrito;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    // getters
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
     }
 
     // toString
 
     @Override
-
     public String toString() {
-        return "Dirección{" + "calle=" + calle + ", numero=" + numero + ", distrito=" + distrito + ", provincia="
-                + provincia + ", departamento=" + departamento + ", pais=" + pais + ", codigoPostal=" + codigoPostal
-                + ", referencia=" + referencia + '}';
+        return "Direccion{" + "pais=" + pais + ", departamento=" + departamento + ", provincia=" + provincia + ", distrito=" + distrito + ", direccion=" + direccion + '}';
     }
-
+   
 }
