@@ -36,17 +36,15 @@ public class App {
         usuario.agregarProducto(objeto1, 5.5f, 2.5f);
         usuario.agregarProducto(objeto2, 3.7f, 1.1f);
         
-//        ArregloUsuarios usuarios = new ArregloUsuarios();
-//        usuarios.agregarUsuario(usuario);
         Configuracion.arrUsuarios.agregarUsuario(usuario);
         
         
-//        GeneradorCodigos codigo = new GeneradorCodigos(usuarios);
-//        codigo.generar();
-//        System.out.println(codigo.getCodigo());
-//        codigo.generar();
-//        System.out.println(codigo.getCodigo());
-//        //El codigo nunca será se repetirá
+        GeneradorCodigos codigo = new GeneradorCodigos(); //GeneradorCodigo no hace falta que tenga como parámetro a usuarios (según lo que veo hasta ahora)
+        codigo.generar();
+        System.out.println(codigo.getCodigo());
+        codigo.generar();
+        System.out.println(codigo.getCodigo());
+        //El codigo nunca será se repetirá
         
 //        SistemaSubastas sistema = new SistemaSubastas(usuarios, codigo); CLAUSURADO POR MIENTRAS xd
 //        sistema.getGenerador().generar();

@@ -8,11 +8,12 @@ public class GeneradorCodigos {
     
     
     //Constructor
-    public GeneradorCodigos(ArregloUsuarios usuarios) {
-        this.codigo = codigo;
-        this.usuarios = new ArregloUsuarios(usuarios);
-    }
     
+//    public GeneradorCodigos(ArregloUsuarios usuarios) {   CLAUSURADO
+//        this.codigo = codigo;
+//        this.usuarios = new ArregloUsuarios(usuarios);
+//    }
+//    
     public GeneradorCodigos() {
         
     }
