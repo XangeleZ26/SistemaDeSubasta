@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Modelo;
 
 import java.util.ArrayList;
@@ -16,14 +11,14 @@ public class Subasta {
     // arraylist pujas
     private ArrayList<Puja> pujas;
     // arraylist facturas
-    private ArrayList<Factura> facturas;
+    private ArrayList<Constancia> constancias;
 
     // constructor
     public Subasta() {
         this.usuarios = new ArrayList<Usuario>();
         this.productos = new ArrayList<Producto>();
         this.pujas = new ArrayList<Puja>();
-        this.facturas = new ArrayList<Factura>();
+        this.constancias = new ArrayList<Constancia>();
     }
 
     // getters
@@ -39,8 +34,8 @@ public class Subasta {
         return pujas;
     }
 
-    public ArrayList<Factura> getFacturas() {
-        return facturas;
+    public ArrayList<Constancia> getFacturas() {
+        return constancias;
     }
 
     // setters
@@ -57,8 +52,8 @@ public class Subasta {
         this.pujas = pujas;
     }
 
-    public void setFacturas(ArrayList<Factura> facturas) {
-        this.facturas = facturas;
+    public void setFacturas(ArrayList<Constancia> constancias) {
+        this.constancias = constancias;
     }
 
     // metodos
@@ -132,17 +127,17 @@ public class Subasta {
 
     // facturas
     // añadir factura
-    public void añadirFactura(Factura factura) {
-        this.facturas.add(factura);
+    public void añadirConstancia(Constancia constancias) {
+        this.constancias.add(constancias);
     }
 
 
     // eliminar factura
-    public boolean eliminarFactura(Factura factura) {
+    public boolean eliminarConstancia(Constancia constancias) {
         // verificar si existe la factura
-        for (Factura f : this.facturas) {
-            if (f.equals(factura)) {
-                this.facturas.remove(f);
+        for (Constancia f : this.constancias) {
+            if (f.equals(constancias)) {
+                this.constancias.remove(f);
                 return true;
             }
         }
@@ -150,9 +145,9 @@ public class Subasta {
     }
 
     // mostrar facturas
-    public String mostrarFacturas() {
+    public String mostrarConstancias() {
         String facturas = "";
-        for (Factura f : this.facturas) {
+        for (Constancia f : this.constancias) {
             facturas += f.toString() + "\n";
         }
         return facturas;

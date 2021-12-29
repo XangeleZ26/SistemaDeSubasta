@@ -38,5 +38,4 @@ public class ControladorInicioFallido {
         inicioFallido.setVisible(true);
     }
     
-    
-}
+}   
