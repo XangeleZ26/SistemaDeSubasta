@@ -8,33 +8,30 @@ import Aplicacion.*;
 import Arreglos.ArregloUsuarios;
 import Modelo.*;
 import Vista.InicioFallido;
-import Vista.PantallaLogin;
+import Vista.frmLogin;
 import Vista.RegistroUsuario;
 
-public class ControladorPantallaInicial {
-    private PantallaLogin pantallaInicial;
+public class ControladorFrmLogin {
+       private frmLogin pantallaInicial;
     private ArregloUsuarios usuarios;
-    private Sistema subasta;
     
-    private InicioFallido inicioFallido;
-    private ControladorInicioFallido controladorIF;
-    
-    public ControladorPantallaInicial(PantallaLogin pantallaInicial) {
+    public ControladorFrmLogin(frmLogin pantallaInicial) {
         this.pantallaInicial = pantallaInicial;
         this.usuarios = Configuracion.arrUsuarios;
         
         this.pantallaInicial.btnIngresar.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(usuarioRegistrado() == false){
+                if(usuarios.usuarioRegistrado(pantallaInicial.txtCorreo.getText(),pantallaInicial.txtContrasena.getText()) == false){
                     pantallaInicial.dispose();
-                    inicioFallido = new InicioFallido();
-                    controladorIF = new ControladorInicioFallido(inicioFallido, usuarios);
+                    InicioFallido inicioFallido = new InicioFallido();
+                    ControladorInicioFallido controladorIF = new ControladorInicioFallido(inicioFallido, usuarios);
                     controladorIF.iniciar();
                 }
                 else{
                     pantallaInicial.dispose();
                     JOptionPane.showMessageDialog(null, "INGRESASTE XD");
+                    
                 }
             }
         });
@@ -61,19 +58,5 @@ public class ControladorPantallaInicial {
         pantallaInicial.setLocationRelativeTo(null);
         pantallaInicial.setVisible(true);
     }
-    
-    public boolean usuarioRegistrado() {
-        boolean result = false;
-        String correo = pantallaInicial.txtCorreo.getText();
-        String contrasena = pantallaInicial.txtContrasena.getText();
-        for(int i=0; i<usuarios.getUsuarios().length ; i++) {
-            if(correo.compareTo(usuarios.getUsuarios()[0].getCorreo())==0){
-                if(contrasena.compareTo(usuarios.getUsuarios()[0].getContraCuenta())==0){
-                    result = true;
-                }
-            }
-        }
-        return result;
-    }
-    
+
 }   

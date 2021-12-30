@@ -5,7 +5,7 @@ import Modelo.Usuario;
 
 
 public class ArregloUsuarios {
-     private Usuario usuarios[];
+    private Usuario usuarios[];
     private int indiceUsu;
     
     //Constructor
@@ -42,7 +42,16 @@ public class ArregloUsuarios {
         result = true;
         return result;
     }
-    
+    public boolean usuarioRegistrado(String correo,String contrasena){
+        boolean result=false;
+        for(int i=0; i<this.indiceUsu ; i++) {
+            if(correo.equalsIgnoreCase(this.usuarios[i].getCorreo())&&contrasena.equalsIgnoreCase(this.usuarios[i].getContraCuenta())){
+                    result = true;
+            }
+        }
+        
+       return result;
+    }
     private boolean estaLlenoUsu() {
         boolean result = false;
         if(this.indiceUsu >=this.usuarios.length){

@@ -4,7 +4,7 @@ package Controlador;
 import Aplicacion.Configuracion;
 import Arreglos.ArregloUsuarios;
 import Modelo.Usuario;
-import Vista.PantallaLogin;
+import Vista.frmLogin;
 import Vista.RegistroUsuario;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -64,8 +64,8 @@ public class ControladorRegistroUsuario {
         this.registroDeUsuarios.btnSalir.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
-             PantallaLogin view=new PantallaLogin();
-            ControladorPantallaInicial controller=new ControladorPantallaInicial(view);
+             frmLogin view=new frmLogin();
+            ControladorFrmLogin controller=new ControladorFrmLogin(view);
             registroDeUsuarios.dispose();
             controller.iniciar();
             }

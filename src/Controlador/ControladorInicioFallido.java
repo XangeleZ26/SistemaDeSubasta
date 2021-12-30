@@ -6,13 +6,13 @@ import Aplicacion.*;
 import Arreglos.ArregloUsuarios;
 import Modelo.*;
 import Vista.InicioFallido;
-import Vista.PantallaLogin;
+import Vista.frmLogin;
 
 
 public class ControladorInicioFallido {
-    private PantallaLogin pantallaInicial;
+    private frmLogin pantallaInicial;
     private InicioFallido inicioFallido;
-    private ControladorPantallaInicial controladorPI;
+    private ControladorFrmLogin controladorPI;
     private ArregloUsuarios usuarios;
     
     public ControladorInicioFallido(InicioFallido inicioFallido, ArregloUsuarios usuarios) {
@@ -23,8 +23,8 @@ public class ControladorInicioFallido {
             @Override
             public void actionPerformed(ActionEvent e) {
                 inicioFallido.dispose();
-                pantallaInicial = new PantallaLogin();
-                controladorPI = new ControladorPantallaInicial(pantallaInicial);
+                pantallaInicial = new frmLogin();
+                controladorPI = new ControladorFrmLogin(pantallaInicial);
                 controladorPI.iniciar();
             }
         });

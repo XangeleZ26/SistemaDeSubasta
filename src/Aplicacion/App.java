@@ -4,7 +4,7 @@ package Aplicacion;
 import Arreglos.ArregloUsuarios;
 import Modelo.*;
 import Controlador.*;
-import Vista.PantallaLogin;
+import Vista.frmLogin;
 
 public class App {
     public static void main(String [] Args) {
@@ -52,9 +52,9 @@ public class App {
 //        System.out.println(sistema.getGenerador().getCodigo());
         
         
-        PantallaLogin pantallaInicial = new PantallaLogin();
+        frmLogin pantallaInicial = new frmLogin();
         //aqui tambien colocar el constructor de SistemaSubastas
-        ControladorPantallaInicial controlador = new ControladorPantallaInicial(pantallaInicial);
+        ControladorFrmLogin controlador = new ControladorFrmLogin(pantallaInicial);
         controlador.iniciar();
         
     }
