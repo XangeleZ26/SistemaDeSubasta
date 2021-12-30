@@ -81,23 +81,7 @@ public class frmPerfil extends javax.swing.JFrame {
 
         labelDirecc.setText("Dirección:");
 
-        txtDNI.setText("a");
-
-        txtCelu.setText("a");
-
-        txtCorreo.setText("a");
-
         txtContra.setText("a");
-
-        txtPais.setText("a");
-
-        txtDepa.setText("a");
-
-        txtProvin.setText("a");
-
-        txtDistrito.setText("a");
-
-        txtDirecc.setText("a");
 
         CheckContra.setText("Mostrar ");
         CheckContra.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -258,7 +242,7 @@ public class frmPerfil extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JCheckBox CheckContra;
     public javax.swing.JLabel ImageUser;
-    private javax.swing.JButton btnSalir;
+    public javax.swing.JButton btnSalir;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

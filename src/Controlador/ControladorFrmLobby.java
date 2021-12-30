@@ -25,7 +25,7 @@ public class ControladorFrmLobby {
         this.vista.btnParticipaciones.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-     
+                System.out.println("aaaa");
             }
         });
 

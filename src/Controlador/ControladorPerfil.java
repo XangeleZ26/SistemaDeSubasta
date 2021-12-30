@@ -7,6 +7,8 @@ package Controlador;
 
 import Modelo.Usuario;
 import Vista.frmPerfil;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class ControladorPerfil {
 
@@ -17,6 +19,14 @@ public class ControladorPerfil {
         this.vista = vista;
         this.user = user;
 
+        this.vista.btnSalir.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+              ControladorFrmLobby controller=new ControladorFrmLobby(user);
+              controller.iniciar();
+              vista.dispose();
+            }
+        });
     }
 
     public void llenarDatos() {
@@ -47,7 +57,7 @@ public class ControladorPerfil {
     }
 
     public void iniciar() {
-//        llenarDatos();
+        llenarDatos();
         this.vista.setLocationRelativeTo(null);
         this.vista.setVisible(true);
     }

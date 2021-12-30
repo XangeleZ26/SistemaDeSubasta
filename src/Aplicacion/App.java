@@ -15,7 +15,7 @@ public class App {
         Tarjeta tarjeta = new Tarjeta(51246587, 123, 350f, 1.5f, true);
         //Constructor llamado: (int numero, int CVV, float saldo, float costoTransaccion, boolean estado)
         
-        Usuario usuario = new Usuario("Angel","Villanueva","12345678","123456789","putamare@gmail.com","123","XXXX",tarjeta);
+        Usuario usuario = new Usuario("Angel","Villanueva","12345678","123456789","xd","123","XXXX",tarjeta);
         //Contstructor llamado: (String ID, String correo, String contraCuenta, String codVerificacion, String nombre, String aPaterno, String aMaterno, int DNI, Ubicacion ubicacion, Contacto contacto, Tarjeta tarjeta)
         
         Objeto objeto1 = new Objeto("Caja de lapiceros", "Una caja de lapiceros marca pilot punta fina de color azul", "OPTIMA");
@@ -56,7 +56,7 @@ public class App {
         //aqui tambien colocar el constructor de SistemaSubastas
         ControladorFrmLogin controlador = new ControladorFrmLogin(pantallaInicial);
         controlador.iniciar();
-        
+        System.out.println(usuario);
     }
 
 }
