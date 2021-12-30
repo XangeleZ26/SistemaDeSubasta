@@ -100,6 +100,7 @@ public class PantallaLogin extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
+        lblTitulo.setBackground(new java.awt.Color(204, 204, 255));
         lblTitulo.setFont(new java.awt.Font("Lucida Sans", 1, 23)); // NOI18N
         lblTitulo.setForeground(new java.awt.Color(51, 51, 51));
         lblTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);

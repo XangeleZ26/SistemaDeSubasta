@@ -1,3 +1,4 @@
+//Producto
 package Modelo;
 
 public class Producto extends Objeto {

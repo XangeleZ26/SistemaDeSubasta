@@ -1,3 +1,4 @@
+//ControladorPanatallaInicial
 package Controlador;
 
 import java.awt.event.*;
@@ -13,7 +14,7 @@ import Vista.RegistroUsuario;
 public class ControladorPantallaInicial {
     private PantallaLogin pantallaInicial;
     private ArregloUsuarios usuarios;
-    private SistemaSubastas subasta;
+    private Sistema subasta;
     
     private InicioFallido inicioFallido;
     private ControladorInicioFallido controladorIF;

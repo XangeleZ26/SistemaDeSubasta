@@ -1,3 +1,4 @@
+//Vendedor
 package Modelo;
 
 public class Vendedor {

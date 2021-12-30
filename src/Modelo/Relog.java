@@ -1,4 +1,4 @@
-
+//Relog
 package Modelo;
 
 public class Relog {

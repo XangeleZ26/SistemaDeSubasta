@@ -1,3 +1,4 @@
+//GeneradorCodigos
 package Modelo;
 
 import Arreglos.ArregloUsuarios;

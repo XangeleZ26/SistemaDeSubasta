@@ -1,3 +1,4 @@
+//ControladorRegistroUsuario
 package Controlador;
 
 import Aplicacion.Configuracion;
