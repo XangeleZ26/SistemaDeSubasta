@@ -6,6 +6,7 @@ public class Usuario extends Persona{
     private String correo;
     private String contraCuenta;
     private String codVerificacion;
+    private boolean activarUbicacion;
     
     private Objeto objetos[];
     private int indiceObj;
@@ -23,6 +24,7 @@ public class Usuario extends Persona{
         this.indiceObj = 0;
         this.productos = new Producto[1];
         this.indiceProd = 0;
+        this.activarUbicacion=false;
     }
     public Usuario(String nombre,String apellido,String DNI,String celular,String correo,String contrasena,String codVerificacion,Tarjeta tarjet) {
         super(nombre,apellido,DNI,celular);
@@ -34,8 +36,17 @@ public class Usuario extends Persona{
         this.productos = new Producto[1];
         this.indiceProd = 0;
         this.tarjeta=tarjet;
+        this.activarUbicacion=false;
     }
+
+    public boolean isActivarUbicacion() {
+        return activarUbicacion;
+    }
+
     //Getters
+    public void setActivarUbicacion(boolean activarUbicacion) {
+        this.activarUbicacion = activarUbicacion;
+    }
 
     public String getContraCuenta() {
         return contraCuenta;

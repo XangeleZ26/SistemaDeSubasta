@@ -3,7 +3,7 @@ package Modelo;
 
 public class Direccion {
     // atributos dirección
-    private String pais;
+    private String pais=null;
     private String departamento;
     private String provincia;
     private String distrito;
@@ -17,7 +17,9 @@ public class Direccion {
        this.distrito=Distrito;
        this.direccion=direccion;
     }
-
+    public Direccion(){
+        
+    }
     public String getPais() {
         return pais;
     }

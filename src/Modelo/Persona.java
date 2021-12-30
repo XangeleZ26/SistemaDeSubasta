@@ -7,15 +7,23 @@ public class Persona {
     private String apellido;
     private String DNI;
     private String celular;
-
+    private Direccion direccion;
     public Persona(String nombre, String apellido, String DNI, String celular) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.DNI = DNI;
         this.celular = celular;
+        this.direccion=new Direccion();
+    }
+
+    public Direccion getDireccion() {
+        return direccion;
     }
 
     //Getters
+    public void setDireccion(Direccion direccion) {
+        this.direccion = direccion;
+    }
 
     public String getNombre() {
         return nombre;

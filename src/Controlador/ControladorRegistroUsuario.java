@@ -74,7 +74,9 @@ public class ControladorRegistroUsuario {
     }
     public void iniciar(){
         registroDeUsuarios.setLocationRelativeTo(null);
+        limpiar();
         registroDeUsuarios.setVisible(true);
+       
     }
 
     public void limpiar(){

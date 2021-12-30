@@ -52,6 +52,15 @@ public class ArregloUsuarios {
         
        return result;
     }
+    public Usuario encontrarUsuario(String correo,String contrasena){
+         int xd=0;
+        for(int i=0; i<this.indiceUsu ; i++) {
+            if(correo.equalsIgnoreCase(this.usuarios[i].getCorreo())&&contrasena.equalsIgnoreCase(this.usuarios[i].getContraCuenta())){
+                   xd=i;
+            }
+        }
+        return this.usuarios[xd];
+    }
     private boolean estaLlenoUsu() {
         boolean result = false;
         if(this.indiceUsu >=this.usuarios.length){

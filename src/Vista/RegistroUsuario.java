@@ -97,15 +97,17 @@ public class RegistroUsuario extends javax.swing.JFrame {
 
         jLabel5.setText("Contraseña");
 
-        TFverificarContrasena.setText("jPasswordField2");
-
         jLabel6.setText("Verificar contraseña");
 
         btnRegistrar.setText("Registrar Usuario");
 
         jLabel7.setText("Correo electrónico");
 
-        TFcontrasena.setText("jPasswordField1");
+        TFcontrasena.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TFcontrasenaActionPerformed(evt);
+            }
+        });
 
         TFdni.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -157,7 +159,7 @@ public class RegistroUsuario extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(17, 17, 17)
                         .addComponent(btnRegistrar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 139, Short.MAX_VALUE)
                         .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(53, 53, 53))))
         );
@@ -250,6 +252,10 @@ public class RegistroUsuario extends javax.swing.JFrame {
     private void TFdniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TFdniActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_TFdniActionPerformed
+
+    private void TFcontrasenaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TFcontrasenaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TFcontrasenaActionPerformed
 
     /**
      * @param args the command line arguments
