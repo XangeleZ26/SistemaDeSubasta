@@ -10,10 +10,9 @@ public class App {
     public static void main(String [] Args) {
         //PRUEBAS DE LAS CLASES:
 
-        //Contstructor llamado: (String pais, String provincia, String distrito, String dirección)
 
-        Tarjeta tarjeta = new Tarjeta(51246587, 123, 350f, 1.5f, true);
-        //Constructor llamado: (int numero, int CVV, float saldo, float costoTransaccion, boolean estado)
+        Tarjeta tarjeta = new Tarjeta("51246587", "123");
+        //Constructor llamado: (int numero, int CVV)
         
         Usuario usuario = new Usuario("Angel","Villanueva","12345678","123456789","xd","123","XXXX",tarjeta);
         //Contstructor llamado: (String ID, String correo, String contraCuenta, String codVerificacion, String nombre, String aPaterno, String aMaterno, int DNI, Ubicacion ubicacion, Contacto contacto, Tarjeta tarjeta)
@@ -57,6 +56,7 @@ public class App {
         ControladorFrmLogin controlador = new ControladorFrmLogin(pantallaInicial);
         controlador.iniciar();
         System.out.println(usuario);
+        System.out.println("CODIGO DE VERIFICACION PARA REGISTRO DE USUARIO: XXXX");
     }
 
 }

@@ -35,10 +35,10 @@ public class frmPerfil extends javax.swing.JFrame {
         nombreYApellido = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        labelDepa = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         labelPais = new javax.swing.JLabel();
-        labelDepa = new javax.swing.JLabel();
         labelProvin = new javax.swing.JLabel();
         labelDistrito = new javax.swing.JLabel();
         labelDirecc = new javax.swing.JLabel();
@@ -52,36 +52,64 @@ public class frmPerfil extends javax.swing.JFrame {
         txtDistrito = new javax.swing.JLabel();
         txtDirecc = new javax.swing.JLabel();
         CheckContra = new javax.swing.JCheckBox();
+        LabelTextoOculto = new javax.swing.JLabel();
+        btnOculto = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
+        btnOpc = new javax.swing.JButton();
+        btnEliminar = new javax.swing.JButton();
+        btnCerrarSesion1 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         btnSalir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         ImageUser.setBackground(new java.awt.Color(255, 255, 255));
         ImageUser.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(ImageUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(167, 11, 106, 105));
 
         nombreYApellido.setText("xd");
+        jPanel1.add(nombreYApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 127, 393, -1));
 
         jLabel1.setText("Correo:");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(141, 192, -1, -1));
 
         jLabel2.setText("Contraseña:");
-
-        jLabel3.setText("DNI:");
-
-        jLabel4.setText("Número de celular:");
-
-        labelPais.setText("Pais:");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(118, 212, -1, -1));
 
         labelDepa.setText("Departamento");
+        jPanel1.add(labelDepa, new org.netbeans.lib.awtextra.AbsoluteConstraints(109, 253, -1, -1));
+
+        jLabel3.setText("DNI:");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(156, 152, -1, -1));
+
+        jLabel4.setText("Número de celular:");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(88, 172, -1, -1));
+
+        labelPais.setText("Pais:");
+        jPanel1.add(labelPais, new org.netbeans.lib.awtextra.AbsoluteConstraints(155, 233, -1, -1));
 
         labelProvin.setText("Provincia:");
+        jPanel1.add(labelProvin, new org.netbeans.lib.awtextra.AbsoluteConstraints(131, 273, -1, -1));
 
         labelDistrito.setText("Distrito:");
+        jPanel1.add(labelDistrito, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 293, -1, -1));
 
         labelDirecc.setText("Dirección:");
+        jPanel1.add(labelDirecc, new org.netbeans.lib.awtextra.AbsoluteConstraints(131, 313, -1, -1));
+        jPanel1.add(txtDNI, new org.netbeans.lib.awtextra.AbsoluteConstraints(196, 152, 189, -1));
+        jPanel1.add(txtCelu, new org.netbeans.lib.awtextra.AbsoluteConstraints(196, 172, 189, -1));
+        jPanel1.add(txtCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(196, 192, 189, -1));
 
         txtContra.setText("a");
+        jPanel1.add(txtContra, new org.netbeans.lib.awtextra.AbsoluteConstraints(196, 212, 145, -1));
+        jPanel1.add(txtPais, new org.netbeans.lib.awtextra.AbsoluteConstraints(196, 233, 189, -1));
+        jPanel1.add(txtDepa, new org.netbeans.lib.awtextra.AbsoluteConstraints(196, 253, 189, -1));
+        jPanel1.add(txtProvin, new org.netbeans.lib.awtextra.AbsoluteConstraints(196, 273, 189, -1));
+        jPanel1.add(txtDistrito, new org.netbeans.lib.awtextra.AbsoluteConstraints(196, 293, 189, -1));
+        jPanel1.add(txtDirecc, new org.netbeans.lib.awtextra.AbsoluteConstraints(196, 313, 189, -1));
 
         CheckContra.setText("Mostrar ");
         CheckContra.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -89,113 +117,57 @@ public class frmPerfil extends javax.swing.JFrame {
                 CheckContraMouseClicked(evt);
             }
         });
+        jPanel1.add(CheckContra, new org.netbeans.lib.awtextra.AbsoluteConstraints(347, 208, -1, -1));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(167, 167, 167)
-                        .addComponent(ImageUser, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(88, 88, 88)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(labelPais, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(labelDistrito, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(labelDirecc, javax.swing.GroupLayout.Alignment.TRAILING)))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(109, 109, 109)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(labelDepa, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(labelProvin, javax.swing.GroupLayout.Alignment.TRAILING))))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtDNI, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtCelu, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtPais, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtDepa, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtProvin, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtDistrito, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtDirecc, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(txtContra, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(CheckContra))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(25, 25, 25)
-                        .addComponent(nombreYApellido, javax.swing.GroupLayout.PREFERRED_SIZE, 393, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(31, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(ImageUser, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(nombreYApellido)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(txtDNI))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(txtCelu))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(txtCorreo))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(txtContra)
-                    .addComponent(CheckContra))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelPais)
-                    .addComponent(txtPais))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelDepa)
-                    .addComponent(txtDepa))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelProvin)
-                    .addComponent(txtProvin))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelDistrito)
-                    .addComponent(txtDistrito))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelDirecc)
-                    .addComponent(txtDirecc))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        LabelTextoOculto.setText("Aún no ha registrado sus datos de ubicación");
+        jPanel1.add(LabelTextoOculto, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 250, 340, -1));
 
-        getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
+        btnOculto.setText("Agregar ubicación");
+        jPanel1.add(btnOculto, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 280, -1, -1));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 34, 450, 332));
+
+        btnOpc.setText("Opciones de tarjeta");
+
+        btnEliminar.setText("Eliminar cuenta");
+        btnEliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEliminarActionPerformed(evt);
+            }
+        });
+
+        btnCerrarSesion1.setText("Cerrar sesión");
+        btnCerrarSesion1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCerrarSesion1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 449, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addComponent(btnOpc)
+                .addGap(18, 18, 18)
+                .addComponent(btnEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnCerrarSesion1, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(15, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnOpc)
+                    .addComponent(btnEliminar)
+                    .addComponent(btnCerrarSesion1))
+                .addGap(0, 11, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel3, java.awt.BorderLayout.PAGE_END);
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 366, -1, -1));
 
         btnSalir.setText("Retroceder");
 
@@ -215,7 +187,7 @@ public class frmPerfil extends javax.swing.JFrame {
                 .addComponent(btnSalir))
         );
 
-        getContentPane().add(jPanel2, java.awt.BorderLayout.PAGE_START);
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -227,6 +199,14 @@ public class frmPerfil extends javax.swing.JFrame {
            ocultar();
        }
     }//GEN-LAST:event_CheckContraMouseClicked
+
+    private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnEliminarActionPerformed
+
+    private void btnCerrarSesion1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarSesion1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCerrarSesion1ActionPerformed
     private void ocultar(){
         String contraOculta = "⚫";
         for(int i=1;i<this.usuario.getContraCuenta().length();i++){
@@ -242,6 +222,11 @@ public class frmPerfil extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JCheckBox CheckContra;
     public javax.swing.JLabel ImageUser;
+    public javax.swing.JLabel LabelTextoOculto;
+    public javax.swing.JButton btnCerrarSesion1;
+    public javax.swing.JButton btnEliminar;
+    public javax.swing.JButton btnOculto;
+    public javax.swing.JButton btnOpc;
     public javax.swing.JButton btnSalir;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

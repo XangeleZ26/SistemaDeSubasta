@@ -2,85 +2,70 @@
 package Modelo;
 
 public class Tarjeta {
-    private int numero;
-    private int CVV;
-    private float saldo;
-    private float costoTransaccion;
-    private boolean estado;
+    private String numero=null;
+    private String CVV;
+
     
     //Constructores
-    public Tarjeta(int numero, int CVV, float saldo, float costoTransaccion, boolean estado) {
+    public Tarjeta(String numero, String CVV) {
         this.numero = numero;
         this.CVV = CVV;
-        this.saldo = saldo;
-        this.costoTransaccion = costoTransaccion;
-        this.estado = estado;
+    }
+    public Tarjeta(){
+        
     }
 
-    public Tarjeta(int numero, int CVV, float saldo) {
-        this.numero = numero;
-        this.CVV = CVV;
-        this.saldo = saldo;
-        this.costoTransaccion = 0f;
-        this.estado = true;
-    }
-    
-    
     //Getters
-    public int getNumero() {
+    public String getNumero() {
         return numero;
     }
     
-    public int getCVV() {
+    public String getCVV() {
         return CVV;
     }
     
-    public float getSaldo() {
-        return saldo;
-    }
-    
-    public float getCostoTransaccion() {
-        return costoTransaccion;
-    }
-    
-    public boolean getEstado() {
-        return estado;
-    }
-    
-    
     //Metodos
-    public void cancelarTarjeta() {
-        this.estado = false;
+//    public void cancelarTarjeta() {
+//        this.estado = false;
+//    }
+//    
+//    public void activarTarjeta() {
+//        this.estado = true;
+//    }
+//    
+//    private boolean tarjetaActiva() {
+//        boolean result = false;
+//        if(this.getEstado()){
+//            result = true;
+//        }
+//        return result;
+//    }
+//    
+//    public boolean pagar(float precio) {
+//        boolean result = false;
+//        if(tarjetaActiva()&&(precio>0f)&&(this.saldo>=precio)){
+//            this.saldo -= precio;
+//            result = true;
+//        }
+//        return result;
+//    }
+//    
+//    public boolean recargar(float dinero) {
+//        boolean result = false;
+//        if(tarjetaActiva()&&(dinero>0f)) {
+//            this.saldo += dinero;
+//            result = true;
+//        }
+//        return result;
+//    }
+
+    public void setNumero(String numero) {
+        this.numero = numero;
+    }
+
+    public void setCVV(String CVV) {
+        this.CVV = CVV;
     }
     
-    public void activarTarjeta() {
-        this.estado = true;
-    }
-    
-    private boolean tarjetaActiva() {
-        boolean result = false;
-        if(this.getEstado()){
-            result = true;
-        }
-        return result;
-    }
-    
-    public boolean pagar(float precio) {
-        boolean result = false;
-        if(tarjetaActiva()&&(precio>0f)&&(this.saldo>=precio)){
-            this.saldo -= precio;
-            result = true;
-        }
-        return result;
-    }
-    
-    public boolean recargar(float dinero) {
-        boolean result = false;
-        if(tarjetaActiva()&&(dinero>0f)) {
-            this.saldo += dinero;
-            result = true;
-        }
-        return result;
-    }
     
 }

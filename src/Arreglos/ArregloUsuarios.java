@@ -42,6 +42,32 @@ public class ArregloUsuarios {
         result = true;
         return result;
     }
+      public boolean eliminar(Usuario user) { 
+        boolean result = false;
+        int marcador = 0;
+
+        for (int i = 0; i < this.indiceUsu; i++) {
+            if (this.usuarios[i]==user) {
+                marcador = i; 
+                result = true;
+            };
+        }
+
+        if (result == true) {
+            if (marcador == this.indiceUsu - 1) {
+                this.usuarios[marcador] = null; 
+            } 
+            else {
+                for (int i = marcador; i < this.indiceUsu - 1; i++) {
+                    this.usuarios[i] = this.usuarios[i + 1];
+                }
+                this.usuarios[this.indiceUsu-1] = null;
+            }
+
+            this.indiceUsu--;
+        }
+        return result;
+    }
     public boolean usuarioRegistrado(String correo,String contrasena){
         boolean result=false;
         for(int i=0; i<this.indiceUsu ; i++) {
