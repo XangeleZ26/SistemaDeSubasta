@@ -8,7 +8,7 @@ public class Subasta {
     // arraylist usuarios
     private ArrayList<Usuario> usuarios;
     // arraylist productos
-    private ArrayList<Producto> productos;
+    private Producto producto;
     // arraylist pujas
     private ArrayList<Puja> pujas;
     // arraylist facturas
@@ -17,7 +17,7 @@ public class Subasta {
     // constructor
     public Subasta() {
         this.usuarios = new ArrayList<Usuario>();
-        this.productos = new ArrayList<Producto>();
+        this.producto = new Producto();
         this.pujas = new ArrayList<Puja>();
         this.constancias = new ArrayList<Constancia>();
     }
@@ -27,9 +27,7 @@ public class Subasta {
         return usuarios;
     }
 
-    public ArrayList<Producto> getProductos() {
-        return productos;
-    }
+   
 
     public ArrayList<Puja> getPujas() {
         return pujas;
@@ -45,9 +43,7 @@ public class Subasta {
         this.usuarios = usuarios;
     }
 
-    public void setProductos(ArrayList<Producto> productos) {
-        this.productos = productos;
-    }
+  
 
     public void setPujas(ArrayList<Puja> pujas) {
         this.pujas = pujas;

@@ -17,7 +17,9 @@ public class Objeto {
         this.categorias = new Categoria[1];
         this.indiceCat = 0;
     }
-    
+    public Objeto(){
+        
+    }
     
     //Getters
     public Categoria[] getCategorias() {

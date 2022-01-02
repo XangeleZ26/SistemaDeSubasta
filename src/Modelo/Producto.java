@@ -18,7 +18,9 @@ public class Producto extends Objeto {
         this.precioInicial = precioInicial;
         this.aumento = aumento;
     }
-    
+    public Producto(){
+        super();
+    }
     
     //Getters
     public float getPrecioInicial() {
