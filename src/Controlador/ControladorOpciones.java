@@ -35,7 +35,9 @@ public class ControladorOpciones {
         this.vista.btnTarjet.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                ControladorFrmAgregarTarjet controller=new ControladorFrmAgregarTarjet(user);
+                controller.iniciar();
+                vista.dispose();
             }
         });
 

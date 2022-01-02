@@ -39,7 +39,11 @@ public class Usuario extends Persona{
 
 
     //Getters
+    
 
+    public void setTarjeta(Tarjeta tarjeta) {
+        this.tarjeta = tarjeta;
+    }
 
     public String getContraCuenta() {
         return contraCuenta;

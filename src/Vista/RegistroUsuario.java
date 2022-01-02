@@ -49,6 +49,8 @@ public class RegistroUsuario extends javax.swing.JFrame {
         TFcodigoVerificacion = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         TFcelular = new javax.swing.JTextField();
+        CheckContra = new javax.swing.JCheckBox();
+        CheckVerifContra = new javax.swing.JCheckBox();
         jPanel4 = new javax.swing.JPanel();
         ERROR = new javax.swing.JLabel();
 
@@ -121,6 +123,20 @@ public class RegistroUsuario extends javax.swing.JFrame {
 
         jLabel9.setText("N° celular");
 
+        CheckContra.setText("Mostrar");
+        CheckContra.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CheckContraMouseClicked(evt);
+            }
+        });
+
+        CheckVerifContra.setText("Mostrar");
+        CheckVerifContra.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CheckVerifContraMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -145,7 +161,9 @@ public class RegistroUsuario extends javax.swing.JFrame {
                                     .addComponent(TFcorreo, javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(TFdni)
                                     .addComponent(TFapellidos)
-                                    .addComponent(TFnombres)))
+                                    .addComponent(TFnombres))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(CheckContra))
                             .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -154,14 +172,16 @@ public class RegistroUsuario extends javax.swing.JFrame {
                                 .addGap(50, 50, 50)
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(TFverificarContrasena, javax.swing.GroupLayout.DEFAULT_SIZE, 186, Short.MAX_VALUE)
-                                    .addComponent(TFcodigoVerificacion))))
-                        .addContainerGap(44, Short.MAX_VALUE))
+                                    .addComponent(TFcodigoVerificacion))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(CheckVerifContra)))
+                        .addContainerGap(16, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(17, 17, 17)
+                        .addGap(28, 28, 28)
                         .addComponent(btnRegistrar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 139, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 170, Short.MAX_VALUE)
                         .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(53, 53, 53))))
+                        .addGap(52, 52, 52))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -189,20 +209,22 @@ public class RegistroUsuario extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(TFcontrasena, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5))
+                    .addComponent(jLabel5)
+                    .addComponent(CheckContra))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
-                    .addComponent(TFverificarContrasena, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(6, 6, 6)
+                    .addComponent(TFverificarContrasena, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(CheckVerifContra))
+                .addGap(4, 4, 4)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
                     .addComponent(TFcodigoVerificacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnRegistrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(26, Short.MAX_VALUE))
+                    .addComponent(btnRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
         );
 
         ERROR.setForeground(new java.awt.Color(255, 0, 0));
@@ -214,12 +236,12 @@ public class RegistroUsuario extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(ERROR, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(41, 41, 41))
+                .addGap(29, 29, 29))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
+                .addGap(27, 27, 27)
                 .addComponent(ERROR, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -257,6 +279,22 @@ public class RegistroUsuario extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_TFcontrasenaActionPerformed
 
+    private void CheckContraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CheckContraMouseClicked
+      if(CheckContra.isSelected()){
+            TFcontrasena.setEchoChar((char)0);
+        }else{
+            TFcontrasena.setEchoChar('⚫');
+        }
+    }//GEN-LAST:event_CheckContraMouseClicked
+
+    private void CheckVerifContraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CheckVerifContraMouseClicked
+      if(CheckVerifContra.isSelected()){
+            TFverificarContrasena.setEchoChar((char)0);
+        }else{
+            TFverificarContrasena.setEchoChar('⚫');
+        }
+    }//GEN-LAST:event_CheckVerifContraMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -293,6 +331,8 @@ public class RegistroUsuario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JCheckBox CheckContra;
+    public javax.swing.JCheckBox CheckVerifContra;
     public javax.swing.JLabel ERROR;
     public javax.swing.JTextField TFapellidos;
     public javax.swing.JTextField TFcelular;

@@ -31,7 +31,8 @@ public class frmLogin extends javax.swing.JFrame {
         lblCorreo = new javax.swing.JLabel();
         lblContrasena = new javax.swing.JLabel();
         txtCorreo = new javax.swing.JTextField();
-        txtContrasena = new javax.swing.JTextField();
+        CheckMostrarContra = new javax.swing.JCheckBox();
+        txtContrasena = new javax.swing.JPasswordField();
         jPanel2 = new javax.swing.JPanel();
         lblTitulo = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
@@ -59,11 +60,10 @@ public class frmLogin extends javax.swing.JFrame {
             }
         });
 
-        txtContrasena.setFont(new java.awt.Font("Lucida Sans", 0, 14)); // NOI18N
-        txtContrasena.setForeground(new java.awt.Color(51, 51, 51));
-        txtContrasena.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtContrasenaActionPerformed(evt);
+        CheckMostrarContra.setText("Mostrar");
+        CheckMostrarContra.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CheckMostrarContraMouseClicked(evt);
             }
         });
 
@@ -77,10 +77,12 @@ public class frmLogin extends javax.swing.JFrame {
                     .addComponent(lblContrasena)
                     .addComponent(lblCorreo))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtContrasena, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txtCorreo)
+                    .addComponent(txtContrasena, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(CheckMostrarContra)
+                .addContainerGap(36, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -92,8 +94,9 @@ public class frmLogin extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblContrasena, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(CheckMostrarContra)
                     .addComponent(txtContrasena, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
@@ -110,7 +113,7 @@ public class frmLogin extends javax.swing.JFrame {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, 414, Short.MAX_VALUE)
+            .addComponent(lblTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, 485, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -146,11 +149,11 @@ public class frmLogin extends javax.swing.JFrame {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(39, 39, 39)
+                .addContainerGap(75, Short.MAX_VALUE)
                 .addComponent(btnIngresar)
-                .addGap(40, 40, 40)
+                .addGap(55, 55, 55)
                 .addComponent(btnRegistrarse)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
+                .addGap(70, 70, 70)
                 .addComponent(btnSalir)
                 .addGap(52, 52, 52))
         );
@@ -174,13 +177,17 @@ public class frmLogin extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtCorreoActionPerformed
 
-    private void txtContrasenaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtContrasenaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtContrasenaActionPerformed
-
     private void btnRegistrarseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarseActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnRegistrarseActionPerformed
+
+    private void CheckMostrarContraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CheckMostrarContraMouseClicked
+        if(CheckMostrarContra.isSelected()){
+            txtContrasena.setEchoChar((char)0);
+        }else{
+            txtContrasena.setEchoChar('⚫');
+        }
+    }//GEN-LAST:event_CheckMostrarContraMouseClicked
 
     /**
      * @param args the command line arguments
@@ -221,6 +228,7 @@ public class frmLogin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JCheckBox CheckMostrarContra;
     public javax.swing.JButton btnIngresar;
     public javax.swing.JButton btnRegistrarse;
     public javax.swing.JButton btnSalir;
@@ -230,7 +238,7 @@ public class frmLogin extends javax.swing.JFrame {
     private javax.swing.JLabel lblContrasena;
     private javax.swing.JLabel lblCorreo;
     private javax.swing.JLabel lblTitulo;
-    public javax.swing.JTextField txtContrasena;
+    public javax.swing.JPasswordField txtContrasena;
     public javax.swing.JTextField txtCorreo;
     // End of variables declaration//GEN-END:variables
 }

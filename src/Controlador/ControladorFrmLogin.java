@@ -22,7 +22,7 @@ public class ControladorFrmLogin {
         this.pantallaInicial.btnIngresar.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(usuarios.usuarioRegistrado(pantallaInicial.txtCorreo.getText(),pantallaInicial.txtContrasena.getText()) == false){
+                if(usuarios.usuarioRegistrado(pantallaInicial.txtCorreo.getText(),String.valueOf(pantallaInicial.txtContrasena.getPassword())) == false){
                     InicioFallido inicioFallido = new InicioFallido();
                     ControladorInicioFallido controladorIF = new ControladorInicioFallido(inicioFallido, usuarios);
                     controladorIF.iniciar();
@@ -30,18 +30,16 @@ public class ControladorFrmLogin {
                 }
                 else{ 
                     JOptionPane.showMessageDialog(null, "INGRESASTE XD");
-                    Usuario user=usuarios.encontrarUsuario(pantallaInicial.txtCorreo.getText(),pantallaInicial.txtContrasena.getText());
+                    Usuario user=usuarios.encontrarUsuario(pantallaInicial.txtCorreo.getText(),String.valueOf(pantallaInicial.txtContrasena.getPassword()));
                     ControladorFrmLobby controller =new ControladorFrmLobby(user);
                     controller.iniciar();
                     pantallaInicial.dispose();
-                    System.out.println("xd");
                 }
             }
         });
        this.pantallaInicial.btnRegistrarse.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("xd");
                ControladorRegistroUsuario controller=new ControladorRegistroUsuario(new RegistroUsuario());
                controller.iniciar();
                pantallaInicial.dispose();
