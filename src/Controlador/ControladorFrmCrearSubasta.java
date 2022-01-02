@@ -6,5 +6,5 @@
 package Controlador;
 
 public class ControladorFrmCrearSubasta {
-    
+    //xd
 }
