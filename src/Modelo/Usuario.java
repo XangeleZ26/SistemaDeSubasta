@@ -6,6 +6,7 @@ public class Usuario extends Persona{
     private String correo;
     private String contraCuenta;
     private String codVerificacion;
+    private int puntuacionMala;
     
     private Objeto objetos[];
     private int indiceObj;
@@ -24,6 +25,7 @@ public class Usuario extends Persona{
         this.productos = new Producto[1];
         this.indiceProd = 0;
         this.tarjeta=new Tarjeta();
+        this.puntuacionMala=0;
     }
     public Usuario(String nombre,String apellido,String DNI,String celular,String correo,String contrasena,String codVerificacion,Tarjeta tarjet) {
         super(nombre,apellido,DNI,celular);
@@ -35,6 +37,7 @@ public class Usuario extends Persona{
         this.productos = new Producto[1];
         this.indiceProd = 0;
         this.tarjeta=tarjet;
+        this.puntuacionMala=0;
     }
 
 
