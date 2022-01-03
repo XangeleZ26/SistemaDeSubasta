@@ -46,7 +46,7 @@ public class frmPujar extends javax.swing.JFrame {
         txtMontoPuja = new javax.swing.JTextField();
         btnPujar = new javax.swing.JButton();
         LabelOblaje = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        btnPagar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -167,7 +167,7 @@ public class frmPujar extends javax.swing.JFrame {
 
         LabelOblaje.setText("Oblaje: \"mostrar valor\"");
 
-        jButton1.setText("Pagar");
+        btnPagar.setText("Pagar");
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -199,7 +199,7 @@ public class frmPujar extends javax.swing.JFrame {
                             .addGap(24, 24, 24)
                             .addComponent(LabelOblaje, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(18, 18, 18)
-                            .addComponent(jButton1))))
+                            .addComponent(btnPagar))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -229,7 +229,7 @@ public class frmPujar extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(LabelOblaje)
-                            .addComponent(jButton1)))
+                            .addComponent(btnPagar)))
                     .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -308,9 +308,9 @@ public class frmPujar extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JLabel LabelOblaje;
     public javax.swing.JButton btnCambiarT;
+    public javax.swing.JButton btnPagar;
     public javax.swing.JButton btnPujar;
     public javax.swing.JButton btnRetro;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;

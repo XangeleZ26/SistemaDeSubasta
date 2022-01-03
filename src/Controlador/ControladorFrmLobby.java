@@ -15,17 +15,19 @@ public class ControladorFrmLobby {
 
     private frmLobby vista;
     private Usuario user;
-
+    public static boolean ingregoXUltima;
     public ControladorFrmLobby(Usuario user) {
         this.vista = new frmLobby();
         this.user = user;
         vista.btnPerfil.setText(this.user.getNombre());
-    
+        ControladorFrmLobby.ingregoXUltima=false;
         
         this.vista.btnParticipaciones.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("aaaa");
+               ControladorMisParticipaciones controller=new ControladorMisParticipaciones(user);
+               controller.iniciar();
+               vista.dispose();
             }
         });
 
@@ -39,7 +41,34 @@ public class ControladorFrmLobby {
                 vista.dispose();
             }
         });
-
+  this.vista.btnSubastasActivas.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ControladorSubastasActivas controller=new ControladorSubastasActivas(user);
+              controller.iniciar();
+              vista.dispose();
+            }
+        });
+  
+  this.vista.btnIngresarUltimasSubas.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //si no selecciona ninguna, el botón no servirá
+                
+                ControladorFrmLobby.ingregoXUltima=true;
+                ControladorFrmDatosSubasta controller=new ControladorFrmDatosSubasta(user);
+              controller.iniciar();
+              vista.dispose();
+            }
+        });
+  this.vista.btnCrearSubasta.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ControladorFrmCrearSubasta controller=new ControladorFrmCrearSubasta(user);
+              controller.iniciar();
+              vista.dispose();
+            }
+        });
     }
 
     public void iniciar() {

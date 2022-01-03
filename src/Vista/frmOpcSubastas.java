@@ -39,16 +39,14 @@ public class frmOpcSubastas extends javax.swing.JFrame {
         jTextArea1 = new javax.swing.JTextArea();
         jLabel12 = new javax.swing.JLabel();
         txtPujaAlta = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        btnTerminarSubas = new javax.swing.JButton();
+        btnElimSubas = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        txtArticulo1 = new javax.swing.JLabel();
+        txtFin = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         txtPujaAlta1 = new javax.swing.JLabel();
-        jButton5 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        btnRetro = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -70,22 +68,18 @@ public class frmOpcSubastas extends javax.swing.JFrame {
 
         txtPujaAlta.setText("xd");
 
-        jButton2.setText("Ver historial de pujas");
+        btnTerminarSubas.setText("Terminar subasta");
 
-        jButton3.setText("Terminar subasta");
-
-        jButton4.setText("Eliminar subasta");
+        btnElimSubas.setText("Eliminar subasta");
 
         jLabel2.setText("Fin de subasta:");
 
-        txtArticulo1.setText("jLabel2");
+        txtFin.setText("jLabel2");
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel11.setText("Precio base:");
 
         txtPujaAlta1.setText("xd");
-
-        jButton5.setText("Cambiar precio base");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -105,9 +99,9 @@ public class frmOpcSubastas extends javax.swing.JFrame {
                                         .addGap(18, 18, 18)
                                         .addComponent(txtArticulo, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jButton3)
+                                        .addComponent(btnTerminarSubas)
                                         .addGap(90, 90, 90)
-                                        .addComponent(jButton4))))
+                                        .addComponent(btnElimSubas))))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(90, 90, 90)
                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -119,12 +113,8 @@ public class frmOpcSubastas extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(txtPujaAlta, javax.swing.GroupLayout.DEFAULT_SIZE, 121, Short.MAX_VALUE)
-                                    .addComponent(txtPujaAlta1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(18, 18, 18)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                        .addGap(0, 15, Short.MAX_VALUE))
+                                    .addComponent(txtPujaAlta1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGap(0, 51, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -132,7 +122,7 @@ public class frmOpcSubastas extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel2)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(txtArticulo1, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtFin, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(48, 48, 48)))))
                 .addContainerGap())
         );
@@ -152,27 +142,25 @@ public class frmOpcSubastas extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(txtArticulo1))
-                .addGap(19, 19, 19)
+                    .addComponent(txtFin))
+                .addGap(23, 23, 23)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
-                    .addComponent(txtPujaAlta1)
-                    .addComponent(jButton5))
+                    .addComponent(txtPujaAlta1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel12)
-                    .addComponent(txtPujaAlta)
-                    .addComponent(jButton2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
+                    .addComponent(txtPujaAlta))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnTerminarSubas, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnElimSubas, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(26, 26, 26))
         );
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
 
-        jButton1.setText("Retroceder");
+        btnRetro.setText("Retroceder");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -180,14 +168,14 @@ public class frmOpcSubastas extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(19, 19, 19)
-                .addComponent(jButton1)
+                .addComponent(btnRetro)
                 .addContainerGap(311, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1))
+                .addComponent(btnRetro))
         );
 
         getContentPane().add(jPanel2, java.awt.BorderLayout.PAGE_START);
@@ -232,11 +220,9 @@ public class frmOpcSubastas extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    public javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    public javax.swing.JButton jButton5;
+    public javax.swing.JButton btnElimSubas;
+    public javax.swing.JButton btnRetro;
+    public javax.swing.JButton btnTerminarSubas;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -247,7 +233,7 @@ public class frmOpcSubastas extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     public javax.swing.JTextArea jTextArea1;
     private javax.swing.JLabel txtArticulo;
-    private javax.swing.JLabel txtArticulo1;
+    public javax.swing.JLabel txtFin;
     public javax.swing.JLabel txtNumeroSubasta;
     public javax.swing.JLabel txtPujaAlta;
     public javax.swing.JLabel txtPujaAlta1;

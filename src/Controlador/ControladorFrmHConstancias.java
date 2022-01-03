@@ -6,28 +6,29 @@
 package Controlador;
 
 import Modelo.Usuario;
-import Vista.frmCrearSubasta;
+import Vista.frmHConstancias;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class ControladorFrmCrearSubasta {
+
+public class ControladorFrmHConstancias {
     private Usuario user;
-    private frmCrearSubasta vista;
+    private frmHConstancias vista;
     
-    public ControladorFrmCrearSubasta(Usuario user){
+    public ControladorFrmHConstancias(Usuario user){
         this.user=user;
-        this.vista=new frmCrearSubasta();
+        this.vista=new frmHConstancias();
         
         this.vista.btnRetro.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                ControladorFrmLobby controller=new ControladorFrmLobby(user);
-              controller.iniciar();
-              vista.dispose();
+                ControladorMisParticipaciones controller = new ControladorMisParticipaciones(user);
+                controller.iniciar();
+                vista.dispose();
             }
         });
     }
-        public void iniciar() {
+      public void iniciar() {
         vista.setLocationRelativeTo(null);
         vista.setVisible(true);
     }
